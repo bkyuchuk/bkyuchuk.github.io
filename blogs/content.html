@@ -1,0 +1,42 @@
+---
+layout: page
+title: Content.
+description: Learn all things software engineering.
+background: '/assets/img/content.jpg'
+---
+
+<!-- Content Posts Section -->
+<div class="container">
+    <div class="row">
+        {% for post in site.categories.content %}
+        <article class="post-preview">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                {% if post.subtitle %}
+                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                {% else %}
+                <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+                {% endif %}
+            </a>
+            <p class="post-meta">Posted on
+                {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+            </p>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center">
+            <p class="small lead text-muted">If you like my articles, consider supporting me. But only if you think that I really deserve it!</p>
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="hosted_button_id" value="3VWYZ9DVGNN4C" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif" border="0"
+                    name="submit" title="PayPal - The safer, easier way to pay online!"
+                    alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,14 +1,13 @@
+# Properties
 title: Blogdan;
 author: Bogdan Kyuchukov
 email: bogdankyuchuk@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: BKyuchukov
 github_username:  bkyuchuk
 linkedin_username: bogdan-kyuchukov-9313a9188
+permalink: /:categories/:title
 
 # Build settings
-#theme: jekyll-theme-clean-blog
 remote_theme: bkyuchuk/custom-clean-blog-jekyll@main
 
 plugins:
